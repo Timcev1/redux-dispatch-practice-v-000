@@ -8,7 +8,7 @@ export function managePets(state = {pets: []}, action){
     case 'REMOVE_PET':
       return {pets: state.pets.filter((pet)=> pet.id !== action.id)};
     default:
-      return sate;
+      return state;
   }
 }
 
