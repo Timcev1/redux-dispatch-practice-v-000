@@ -2,6 +2,14 @@ export let state;
 
 
 export function managePets(){
+  switch (action.type){
+    case 'ADD_PET':
+    return {pets: [...state.pets, action.pet]}
+    case 'REMOVE_PET':
+    return {pets: state.pets.filter((pet)=> pet.id !== action.id)};
+    default:
+    return sate;
+  }
 }
 
 export function dispatch(){
